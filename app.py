@@ -12,7 +12,7 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # 可自行修改
 
 # 加载水质数据（在应用启动时）
-water_data_path = os.path.join('软件工程大作业数据', '水质数据', 'water_quality_by_name')
+water_data_path = os.path.join('软件工程大作业的数据', '水质数据', 'water_quality_by_name')
 all_water_data = load_all_water_data(water_data_path)
 monitoring_sites = all_water_data['数据来源_监测点'].unique().tolist() if not all_water_data.empty else []
 water_parameters = [
